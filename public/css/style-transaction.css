@@ -1,0 +1,53 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right, #333399, #ff00cc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login-card{
+    width: 450px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 3rem;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.login-card::before{
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, .3);
+    inset: 0;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+.login-card-logo{
+    margin-bottom: 2rem;
+}
+
+.login-card-logo img{
+    width: 60px;
+}
+
+.login-card-logo,
+.login-card-header,
+.login-card-footer{
+    text-align: center;
+}
+
+.login-card-footer{
+    padding: 20px;
+}
+
+.transfer{
+    text-align: center;
+}
+
+.header{
+    color: #910775;
+}

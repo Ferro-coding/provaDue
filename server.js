@@ -1,48 +1,36 @@
-//const http = require('http');
-
-//const {readFileSync, writeFileSync} = require('fs')
-
-//const hostname = '0.0.0.0';
-
-//const port = 3000;
-/*
-const server = http.createServer((req, res) => { 
-    //res.statusCode = 200; 
-    //res.setHeader('Content-Type', 'text/plain');
-    //res.end('Zeet Node');
-    if(req.url === '/'){
-        res.write('sesso')
-        res.end()
-    }
-    
-    const express = require('express')
-    const app = express()
-    
-});
-*/
-
-/*
-server.listen(port, hostname, () => { 
-    console.log('Server running at http://${hostname}:${port}/');
-});
-*/
-/*
-app.get('/paccita',function (req, res) {
-    res.sendFile('login.html', {root: __dirname })
-})
-*/
-//app.listen(3000);
-
-
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
+app.use(express.static('public'));
 
-app.get("/", (req, res) => res.sendFile('login.html', {root: __dirname + '/public'}));
+app.get("/", (req, res) => res.sendFile('index.html', {root: __dirname + '/public'}));
+app.get("/wallet", (req, res) => res.sendFile('wallet.html', {root: __dirname + '/public'}));
+app.get("/doLogout", (req, res) =>{
+    //FARE IL LOGOUT(Middleware)
+    res.sendFile('index.html', {root: __dirname + '/public'});
+});
+app.get("/transaction", (req, res) => res.sendFile('transaction.html', {root: __dirname + '/public'}));
+
+
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const html = `
 <!DOCTYPE html>
 <html>
@@ -93,3 +81,4 @@ const html = `
   </body>
 </html>
 `
+*/

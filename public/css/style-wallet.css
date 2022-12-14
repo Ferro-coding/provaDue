@@ -1,0 +1,35 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #333399, #ff00cc);
+
+}
+
+.nome-account-stringa{
+    position: fixed;
+    right: 0;
+}
+
+
+
+.view-saldo,
+.view-saldo2,
+.view-saldo3{
+    text-align: center;
+    padding: 5%;
+    margin-bottom: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    
+}
+
+.view-saldo{
+    margin-top: 30px;
+}
+
+#saldo{
+    color: rgb(213, 213, 213);
+    position: absolute;
+    right: 10px;
+}
