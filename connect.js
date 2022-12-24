@@ -1,7 +1,7 @@
 const { Client } = require('pg');
 require('dotenv').config();
 
-function startvv(inputUsername){
+function startvv(inputUsern<ame){
   (async () => {
     const client = new Client({
       host: process.env.PG_HOST,
